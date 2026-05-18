@@ -1,20 +1,41 @@
 [gd_scene format=3 uid="uid://c0jj0ydoghfo1"]
 
+[ext_resource type="Script" uid="uid://vveol6fwp5sp" path="res://scripts/costumer_panel.gd" id="1_0utxo"]
+[ext_resource type="Texture2D" uid="uid://dpu5xgd2iakml" path="res://sprites/pfpless.png" id="1_hod7e"]
+[ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="3_0utxo"]
+
 [node name="CostumerPanel" type="Panel" unique_id=2142009504]
-offset_right = 357.0
-offset_bottom = 87.0
+offset_right = 675.0
+offset_bottom = 165.0
+script = ExtResource("1_0utxo")
 
 [node name="SpriteCliente" type="TextureRect" parent="." unique_id=921388590]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 12.0
+offset_top = 20.0
+offset_right = 92.0
+offset_bottom = 165.0
+texture = ExtResource("1_hod7e")
 
 [node name="BalaoDeFala" type="Panel" parent="." unique_id=1812911215]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 105.0
+offset_top = 35.0
+offset_right = 660.0
+offset_bottom = 155.0
 
-[node name="OrderList" type="VBoxContainer" parent="BalaoDeFala" unique_id=340453138]
+[node name="ProblemLabel" type="Label" parent="BalaoDeFala" unique_id=994289374]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 547.0
+offset_bottom = 112.0
+
+[node name="NameLabel" type="Label" parent="." unique_id=688330102]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 10.0
+offset_right = 305.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("3_0utxo")
+text = "Gerivaldo"
