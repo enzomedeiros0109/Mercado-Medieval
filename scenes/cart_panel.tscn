@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://do6kw7jyt5r"]
+
+[node name="CartPanel" type="Panel" unique_id=957873314]
+offset_right = 332.0
+offset_bottom = 290.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=276839078]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DeliverButton" type="Button" parent="." unique_id=870339932]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 251.0
+offset_right = 200.0
+offset_bottom = 282.0
+text = "Entregar"

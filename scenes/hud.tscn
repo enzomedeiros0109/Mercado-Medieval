@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://crur2h3336c4m"]
+
+[node name="HUD" type="CanvasLayer" unique_id=552382864]
+
+[node name="ClientesLabel" type="Label" parent="." unique_id=1391586043]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="MoneyLabel" type="Label" parent="." unique_id=392408721]
+offset_right = 40.0
+offset_bottom = 23.0
