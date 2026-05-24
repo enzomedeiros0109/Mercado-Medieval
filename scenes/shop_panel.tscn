@@ -25,6 +25,7 @@ theme_override_constants/separation = 8
 
 [node name="PotionsGrid" type="GridContainer" parent="HBoxContainer/PotionsColumn" unique_id=1135446161]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/v_separation = 6
 
 [node name="IngredientsColumn" type="VBoxContainer" parent="HBoxContainer" unique_id=1919403833]
@@ -55,9 +56,9 @@ texture = ExtResource("3_e423a")
 
 [node name="PotionsTitle" type="Label" parent="." unique_id=1778526003]
 layout_mode = 0
-offset_left = 44.0
+offset_left = -6.0
 offset_top = -3.0
-offset_right = 361.0
+offset_right = 311.0
 offset_bottom = 20.0
 theme_override_fonts/font = ExtResource("1_6jwop")
 theme_override_font_sizes/font_size = 16
