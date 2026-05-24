@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bt4trnlv72sdj"]
 
 [ext_resource type="Texture2D" uid="uid://51ebj0t7kckq" path="res://sprites/background_provisorio.png" id="1_ekxnf"]
-[ext_resource type="Script" uid="uid://d3xqho3a6jhqh" path="res://scenes/start_button.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://d3xqho3a6jhqh" path="res://start_button.gd" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="2_8ln24"]
-[ext_resource type="Script" uid="uid://gpe2b5qgmvxg" path="res://scenes/exit_button.gd" id="3_bqqt6"]
+[ext_resource type="Script" uid="uid://gpe2b5qgmvxg" path="res://scripts/exit_button.gd" id="3_bqqt6"]
 
 [node name="MainMenu" type="Node2D" unique_id=312149259]
 

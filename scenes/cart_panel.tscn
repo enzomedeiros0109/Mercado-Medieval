@@ -29,7 +29,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_pm8og")
 action_mode = 0
 text = "Entregar"
 
-[node name="CartItemList" type="VBoxContainer" parent="." unique_id=902156338]
+[node name="CartItemList" type="HBoxContainer" parent="." unique_id=2043077019]
 layout_mode = 0
 offset_top = 1.0
 offset_right = 800.0

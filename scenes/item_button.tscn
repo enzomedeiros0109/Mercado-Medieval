@@ -4,12 +4,21 @@
 [ext_resource type="Script" uid="uid://2yp7xcehast6" path="res://scripts/item_button.gd" id="1_wcc7j"]
 [ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="3_dk8qb"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dk8qb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8237l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_plkct"]
+
 [node name="ItemButton" type="Button" unique_id=1872773235]
 custom_minimum_size = Vector2(96, 90)
 offset_left = 19.0
 offset_top = 10.0
 offset_right = 115.0
 offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dk8qb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_8237l")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_plkct")
 action_mode = 0
 script = ExtResource("1_wcc7j")
 

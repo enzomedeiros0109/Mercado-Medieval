@@ -17,6 +17,7 @@ mouse_filter = 2
 expand_mode = 1
 
 [node name="CostumerPanel" parent="." unique_id=2142009504 instance=ExtResource("2_fdhsn")]
+z_index = -1
 mouse_filter = 2
 
 [node name="CartPanel" parent="." unique_id=957873314 instance=ExtResource("3_tvdqs")]
