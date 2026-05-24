@@ -1,18 +1,45 @@
 [gd_scene format=3 uid="uid://do6kw7jyt5r"]
 
-[node name="CartPanel" type="Panel" unique_id=957873314]
-offset_right = 332.0
-offset_bottom = 290.0
+[ext_resource type="Script" uid="uid://d36wukb25lp26" path="res://scripts/cart_panel.gd" id="1_xv0j0"]
+[ext_resource type="Texture2D" uid="uid://dwjshcv3wvs1u" path="res://sprites/DelieverLabel.png" id="2_e88p6"]
+[ext_resource type="Texture2D" uid="uid://bjwwcfvsesx85" path="res://sprites/upper_bench (1).png" id="3_xv0j0"]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=276839078]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pm8og"]
+content_margin_left = 10.0
+content_margin_top = 8.0
+content_margin_right = 10.0
+content_margin_bottom = 8.0
+texture = ExtResource("2_e88p6")
+
+[node name="CartPanel" type="Panel" unique_id=957873314]
+offset_top = 165.0
+offset_right = 960.0
+offset_bottom = 225.0
+mouse_filter = 2
+script = ExtResource("1_xv0j0")
+metadata/_edit_group_ = true
 
 [node name="DeliverButton" type="Button" parent="." unique_id=870339932]
 layout_mode = 0
-offset_left = 125.0
-offset_top = 251.0
-offset_right = 200.0
-offset_bottom = 282.0
+offset_left = 820.0
+offset_top = 12.0
+offset_right = 950.0
+offset_bottom = 48.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_pm8og")
+action_mode = 0
 text = "Entregar"
+
+[node name="CartItemList" type="VBoxContainer" parent="." unique_id=902156338]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 800.0
+offset_bottom = 37.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=229309532]
+z_index = -6
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 60.0
+mouse_filter = 2
+texture = ExtResource("3_xv0j0")

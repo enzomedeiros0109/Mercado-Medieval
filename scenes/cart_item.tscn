@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cj7ces1tn74wr"]
+
+[ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="1_2e7p0"]
+[ext_resource type="Script" uid="uid://bkbrmhhbs6gtg" path="res://scripts/cart_item.gd" id="1_4eub4"]
+
+[node name="CartItem" type="HBoxContainer" unique_id=2062538805]
+offset_top = 1.0
+offset_right = 165.0
+offset_bottom = 32.0
+theme_override_constants/separation = 8
+alignment = 1
+script = ExtResource("1_4eub4")
+
+[node name="ItemNameLabel" type="Label" parent="." unique_id=1135268394]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2e7p0")
+text = "Poção de cura:"
+
+[node name="QuantityLabel" type="Label" parent="." unique_id=1020608587]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2e7p0")
+text = "12"
+
+[node name="RemoveButton" type="Button" parent="." unique_id=1502370329]
+modulate = Color(0.9999997, 0.12457236, 0.08649377, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2e7p0")
+text = "Remover"
