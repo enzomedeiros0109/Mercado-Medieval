@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hqmccmpudbqs" path="res://scripts/hud.gd" id="1_ahhtf"]
 [ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="2_oo0fn"]
+[ext_resource type="Texture2D" uid="uid://boveacpwiexhg" path="res://sprites/hudBG.png" id="3_5ysmq"]
 
 [node name="HUD" type="CanvasLayer" unique_id=552382864]
 script = ExtResource("1_ahhtf")
@@ -11,25 +12,39 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -285.0
-offset_bottom = 265.0
+offset_bottom = 165.0
 grow_horizontal = 0
 mouse_filter = 2
 alignment = 1
 
 [node name="PontosLabel" type="Label" parent="HBoxContainer" unique_id=1391586043]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.00079500925, 0.00084063195, 3.829657e-06, 1)
 theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 20
 text = "aaa"
 horizontal_alignment = 1
 
 [node name="AcertosLabel" type="Label" parent="HBoxContainer" unique_id=392408721]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.015089797, 0.09741921, 0.021708544, 1)
 theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 20
 text = "aaa"
 horizontal_alignment = 1
 
 [node name="ErrosLabel" type="Label" parent="HBoxContainer" unique_id=662337053]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.27828354, 0.03979014, 0.057392485, 1)
 theme_override_fonts/font = ExtResource("2_oo0fn")
+theme_override_font_sizes/font_size = 20
 text = "aaa"
 horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1276719206]
+z_index = -1
+offset_left = 675.0
+offset_right = 960.0
+offset_bottom = 165.0
+texture = ExtResource("3_5ysmq")
+expand_mode = 1
