@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8lemkdvxvjc5"]
 
 [ext_resource type="Script" uid="uid://bow1w51ijg4au" path="res://scripts/shop_scene.gd" id="1_p7evi"]
+[ext_resource type="Texture2D" uid="uid://c1xyvmxhkq4k7" path="res://sprites/BG1.png" id="2_bk5ov"]
 [ext_resource type="PackedScene" uid="uid://c0jj0ydoghfo1" path="res://scenes/costumer_panel.tscn" id="2_fdhsn"]
 [ext_resource type="PackedScene" uid="uid://do6kw7jyt5r" path="res://scenes/cart_panel.tscn" id="3_tvdqs"]
 [ext_resource type="PackedScene" uid="uid://b6rksl5ulpeff" path="res://scenes/shop_panel.tscn" id="4_bk5ov"]
@@ -11,12 +12,15 @@
 script = ExtResource("1_p7evi")
 
 [node name="Background" type="TextureRect" parent="." unique_id=140147639]
+z_index = -2
 offset_right = 960.0
-offset_bottom = 540.0
+offset_bottom = 165.0
 mouse_filter = 2
+texture = ExtResource("2_bk5ov")
 expand_mode = 1
 
 [node name="CostumerPanel" parent="." unique_id=2142009504 instance=ExtResource("2_fdhsn")]
+z_index = -1
 mouse_filter = 2
 
 [node name="CartPanel" parent="." unique_id=957873314 instance=ExtResource("3_tvdqs")]

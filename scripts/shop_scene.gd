@@ -10,29 +10,141 @@ var current_customer: Dictionary = {}
 
 var customer_pool: Array = [
 	{
-		"name": "Mago Aldric",
-		"sprite": "res://sprites/pfpless.png",
-		"problem": "Preciso tomar poções de cura\nduas vezes ao dia durante 8 dias.\nQuantas poções devo levar?",
+		"name": "Mago Valerius",
+		"sprite": "res://sprites/spritesclientes/MagoValerius.png",
+		"problem": "Olá! Quero comprar poções de mana.\nVou usar 2 feitiços hoje e cada\num gasta 3 poções. Me vê o total!",
 		"correct_order": {
-			"Poção de Cura": 16
+			"Poção de Mana": 6
 		}
 	},
 	{
-		"name": "Guerreira Lira",
-		"sprite": "res://sprites/pfpless.png",
-		"problem": "Tenho 20 moedas e cada flecha\ncusta 4 moedas. Quantas flechas\nconsigo comprar?",
+		"name": "Caçador Nick",
+		"sprite": "res://sprites/spritesclientes/CaçadorNick.png",
+		"problem": "Meus 4 cães de caça foram envenenados!\nMe vende 2 antídotos para\ncada um deles, por favor.",
 		"correct_order": {
-			"Flecha": 5
+			"Antídoto": 8
 		}
 	},
 	{
-		"name": "Druida Fennor",
-		"sprite": "res://sprites/pfpless.png",
-		"problem": "Preciso de ingredientes para\n3 poções. Cada poção usa\n4 ervas. Quantas ervas no total?",
+		"name": "Curandeira Ana",
+		"sprite": "res://sprites/spritesclientes/CurandeiraAna.png",
+		"problem": "Bom dia! Vou levar ervas lunares.\nQuero fazer 5 chás medicinais e\nuso 2 ervas em cada panela.",
 		"correct_order": {
-			"Erva Lunar": 12
+			"Erva Lunar": 10
 		}
 	},
+	{
+		"name": "Bruxo Boris",
+		"sprite": "res://sprites/spritesclientes/BruxoBoris.png",
+		"problem": "Gostaria de pernas de sapo.\nTenho 20 moedas e cada uma custa 5.\nMe dá tudo o que meu dinheiro compra!",
+		"correct_order": {
+			"Perna de Sapo": 4
+		}
+	},
+	{
+		"name": "Alquimista Chloe",
+		"sprite": "res://sprites/spritesclientes/AlquimistaChloe.png",
+		"problem": "Vou levar olhos de aranha. Ponha na\nsacola o suficiente para 3 poções,\nsabendo que cada poção usa 4 olhos.",
+		"correct_order": {
+			"Olho de Aranha": 12
+		}
+	},
+	{
+		"name": "Arqueira Tyra",
+		"sprite": "res://sprites/spritesclientes/ArqueiraTyra.png",
+		"problem": "Preciso de flechas para a caçada.\nQuero encher minhas 2 aljavas,\ne cabem 10 flechas em cada uma.",
+		"correct_order": {
+			"Flecha": 20
+		}
+	},
+	{
+		"name": "Ferreiro Thorin",
+		"sprite": "res://sprites/spritesclientes/FerreiroThorin.png",
+		"problem": "Olá, patrão! Tenho 15 moedas de ouro.\nCada espada longa custa 5 moedas.\nMe venda o máximo que eu puder pagar.",
+		"correct_order": {
+			"Espada Longa": 3
+		}
+	},
+	{
+		"name": "Guarda Real Ben",
+		"sprite": "res://sprites/spritesclientes/GuardaRealBen.png",
+		"problem": "Somos um grupo de 6 cavaleiros na porta.\nCada um de nós precisa de 1 escudo.\nPode preparar o pedido para a gente!",
+		"correct_order": {
+			"Escudo": 6
+		}
+	},
+	{
+		"name": "Cavaleiro Arthur",
+		"sprite": "res://sprites/spritesclientes/CavaleiroArthur.png",
+		"problem": "Me dá poções de cura! Vou me aventurar\nna floresta por 3 dias e quero\ntomar 2 poções por dia para garantir.",
+		"correct_order": {
+			"Poção de Cura": 6
+		}
+	},
+	{
+		"name": "Elfa Elen",
+		"sprite": "res://sprites/spritesclientes/ElfaElen.png",
+		"problem": "Me vende algumas ervas lunares.\nPreciso de 4 delas para um feitiço\ne mais 5 para dar de presente.",
+		"correct_order": {
+			"Erva Lunar": 9
+		}
+	},
+	{
+		"name": "Goblin Grog",
+		"sprite": "res://sprites/spritesclientes/GoblinGrog.png",
+		"problem": "Vou fazer um sopão! Me vê pernas de sapo:\nquero colocar 3 pernas em cada um\ndos meus 5 pratos de sopa.",
+		"correct_order": {
+			"Perna de Sapo": 15
+		}
+	},
+	{
+		"name": "Feiticeira Luna",
+		"sprite": "res://sprites/spritesclientes/FeiticeiraLuna.png",
+		"problem": "Moço, tenho 16 moedas de prata.\nMe dá tudo em olhos de aranha!\nSabendo que cada um custa 2 moedas.",
+		"correct_order": {
+			"Olho de Aranha": 8
+		}
+	},
+	{
+		"name": "Rei Richard",
+		"sprite": "res://sprites/spritesclientes/ReiRichard.png",
+		"problem": "Quero comprar espadas longas para\nmeus dois filhos gêmeos da guarda.\nMe vê 1 para cada um deles.",
+		"correct_order": {
+			"Espada Longa": 2
+		}
+	},
+	{
+		"name": "Paladina Clara",
+		"sprite": "res://sprites/spritesclientes/PaladinaClara.png",
+		"problem": "Vou levar escudos para o batalhão.\nTenho 30 moedas de ouro e cada\nescudo pesado custa 10 moedas.",
+		"correct_order": {
+			"Escudo": 3
+		}
+	},
+	{
+		"name": "Viajante Toby",
+		"sprite": "res://sprites/spritesclientes/ViajanteToby.png",
+		"problem": "Me vê poções de cura! Meu dragão de\nestimação tomou 2 ontem e quer\nmais 5 hoje porque ainda está dodói.",
+		"correct_order": {
+			"Poção de Cura": 7
+		}
+	},
+	{
+		"name": "Ilusionista Zoro",
+		"sprite": "res://sprites/spritesclientes/IlusionistaZoro.png",
+		"problem": "Preciso de poções de mana para a guilda.\nSomos 2 magos e cada um de nós\nquer levar 5 poções na mochila.",
+		"correct_order": {
+			"Poção de Mana": 10
+		}
+	},
+	{
+		"name": "Bardo Jasp",
+		"sprite": "res://sprites/spritesclientes/BardoJasp.png",
+		"problem": "Vou levar ervas lunares! Tenho aqui\n18 moedas de bronze e cada maço\nda erva custa 6 moedas.",
+		"correct_order": {
+			"Erva Lunar": 3
+		}
+	}
 ]
 
 func _ready():

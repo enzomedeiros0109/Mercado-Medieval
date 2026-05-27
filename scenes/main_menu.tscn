@@ -1,39 +1,74 @@
 [gd_scene format=3 uid="uid://bt4trnlv72sdj"]
 
+[ext_resource type="Texture2D" uid="uid://51ebj0t7kckq" path="res://sprites/background_provisorio.png" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://d3xqho3a6jhqh" path="res://start_button.gd" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="2_8ln24"]
+[ext_resource type="Script" uid="uid://gpe2b5qgmvxg" path="res://scripts/exit_button.gd" id="3_bqqt6"]
+
 [node name="MainMenu" type="Node2D" unique_id=312149259]
 
-[node name="StartButton" type="Button" parent="." unique_id=911243114]
-offset_left = 478.0
-offset_top = 267.0
-offset_right = 698.0
-offset_bottom = 317.0
+[node name="background" type="Area2D" parent="." unique_id=965820955]
+modulate = Color(1, 1, 1, 0.68235296)
 
-[node name="Sprite2D" type="Sprite2D" parent="StartButton" unique_id=1759344027]
+[node name="Sprite2D" type="Sprite2D" parent="background" unique_id=18587177]
+modulate = Color(1.0003047, 1.0003047, 0.99638206, 1)
+self_modulate = Color(1, 1, 1, 0.6627451)
+position = Vector2(480.99997, 273.00003)
+scale = Vector2(0.6998546, 0.70963544)
+texture = ExtResource("1_ekxnf")
+
+[node name="StartButton" type="Button" parent="." unique_id=911243114]
+offset_left = 349.0
+offset_top = 262.0
+offset_right = 569.0
+offset_bottom = 312.0
+theme_override_fonts/font = ExtResource("2_8ln24")
+text = "JOGAR"
+script = ExtResource("1_l6cm7")
 
 [node name="ExtraButton" type="Button" parent="." unique_id=992454189]
-offset_left = 478.0
-offset_top = 334.0
-offset_right = 698.0
-offset_bottom = 384.0
-
-[node name="Sprite2D" type="Sprite2D" parent="ExtraButton" unique_id=1816548000]
+offset_left = 350.0
+offset_top = 328.0
+offset_right = 570.0
+offset_bottom = 378.0
+theme_override_fonts/font = ExtResource("2_8ln24")
+text = "EXTRA"
 
 [node name="ExitButton" type="Button" parent="." unique_id=1062559686]
-offset_left = 478.0
-offset_top = 400.0
-offset_right = 698.0
-offset_bottom = 450.0
+offset_left = 351.0
+offset_top = 395.0
+offset_right = 571.0
+offset_bottom = 445.0
+theme_override_fonts/font = ExtResource("2_8ln24")
+text = "SAIR"
+script = ExtResource("3_bqqt6")
 
-[node name="Sprite2D" type="Sprite2D" parent="ExitButton" unique_id=1271917490]
-
-[node name="Label" type="Label" parent="." unique_id=690434228]
+[node name="Title" type="Label" parent="." unique_id=690434228]
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 165.0
-offset_top = 106.0
-offset_right = 1013.5
-offset_bottom = 205.0
+offset_top = 50.0
+offset_right = 960.0
+offset_bottom = 149.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 72
+theme_override_fonts/font = ExtResource("2_8ln24")
+theme_override_font_sizes/font_size = 48
 text = "MERCADO MEDIEVAL"
 horizontal_alignment = 1
+
+[node name="TitleShadow" type="Label" parent="Title" unique_id=2123294288]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -483.0
+offset_top = -2.0
+offset_right = 477.0
+offset_bottom = 97.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8ln24")
+theme_override_font_sizes/font_size = 48
+text = "MERCADO MEDIEVAL"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
+[connection signal="pressed" from="ExitButton" to="ExitButton" method="_on_pressed"]

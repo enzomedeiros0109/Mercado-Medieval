@@ -11,19 +11,19 @@ var item_button_scene = preload("res://scenes/item_button.tscn")
 
 var items_data = {
 	"potions": [
-		{ "name" : "Poção de Cura",  "icon": "res://sprites/Provisory_Potion.png"},
-		{ "name": "Poção de Mana",  "icon": "res://sprites/Provisory_Potion.png"  },
-		{ "name": "Antídoto",       "icon": "res://sprites/Provisory_Potion.png"  },
+		{ "name" : "Poção de Cura",  "icon": "res://sprites/spritesitens/PoçãoDeCura.png" },
+		{ "name": "Poção de Mana",  "icon": "res://sprites/spritesitens/PoçãoDeMana.png" },
+		{ "name": "Antídoto", "icon": "res://sprites/spritesitens/Antidoto.png" },
 	],
 	"ingredients": [
-		{ "name": "Erva Lunar",     "icon": "res://sprites/Provisory_Potion.png" },
-		{ "name": "Perna de Sapo",  "icon": "res://sprites/Provisory_Potion.png" },
-		{ "name": "Olho de Aranha", "icon": "res://sprites/Provisory_Potion.png" },
+		{ "name": "Erva Lunar",     "icon": "res://sprites/spritesitens/Erva Lunar.png" },
+		{ "name": "Perna de Sapo",  "icon": "res://sprites/spritesitens/PernaDeSapo.png" },
+		{ "name": "Olho de Aranha", "icon": "res://sprites/spritesitens/OlhoDeAranha.png" },
 	],
 	"equipment": [
-		{ "name": "Flecha",         "icon": "res://sprites/Provisory_Potion.png" },
-		{ "name": "Espada Longa",   "icon": "res://sprites/Provisory_Potion.png" },
-		{ "name": "Escudo",         "icon": "res://sprites/Provisory_Potion.png" },
+		{ "name": "Flecha",         "icon": "res://sprites/spritesitens/Flecha.png" },
+		{ "name": "Espada Longa",   "icon": "res://sprites/spritesitens/EspadaLonga.png" },
+		{ "name": "Escudo",         "icon": "res://sprites/spritesitens/Escudo.png" },
 	],
 }
 

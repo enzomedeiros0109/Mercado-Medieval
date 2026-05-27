@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://d36wukb25lp26" path="res://scripts/cart_panel.gd" id="1_xv0j0"]
 [ext_resource type="Texture2D" uid="uid://dwjshcv3wvs1u" path="res://sprites/DelieverLabel.png" id="2_e88p6"]
-[ext_resource type="Texture2D" uid="uid://bjwwcfvsesx85" path="res://sprites/upper_bench (1).png" id="3_xv0j0"]
+[ext_resource type="Texture2D" uid="uid://403ae3065qm4" path="res://sprites/oaktable.png" id="3_xv0j0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xv0j0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pm8og"]
 content_margin_left = 10.0
@@ -16,6 +18,7 @@ offset_top = 165.0
 offset_right = 960.0
 offset_bottom = 225.0
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xv0j0")
 script = ExtResource("1_xv0j0")
 metadata/_edit_group_ = true
 
@@ -29,7 +32,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_pm8og")
 action_mode = 0
 text = "Entregar"
 
-[node name="CartItemList" type="VBoxContainer" parent="." unique_id=902156338]
+[node name="CartItemList" type="HBoxContainer" parent="." unique_id=2043077019]
 layout_mode = 0
 offset_top = 1.0
 offset_right = 800.0
@@ -43,3 +46,4 @@ offset_right = 960.0
 offset_bottom = 60.0
 mouse_filter = 2
 texture = ExtResource("3_xv0j0")
+expand_mode = 1
