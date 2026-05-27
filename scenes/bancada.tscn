@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cqaxokai2xipg"]
+
+[ext_resource type="Texture2D" uid="uid://bf4mnnb8g8j3" path="res://sprites/bancada.png" id="2_gakdm"]
+[ext_resource type="Texture2D" uid="uid://mau0mmbckfma" path="res://sprites/bancada_em_cima.png" id="2_t1w6g"]
+[ext_resource type="Texture2D" uid="uid://bmbqrgqktdfh6" path="res://sprites/health_potion_sprite.png" id="3_t1w6g"]
+[ext_resource type="Texture2D" uid="uid://u76k6fukjvki" path="res://sprites/mana_potion_sprite.png" id="4_8jki2"]
+
+[node name="Bancada" type="Node2D" unique_id=484127325]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=335470483]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Area2D" unique_id=1329177692]
+position = Vector2(480.5, 273.75)
+scale = Vector2(1.0010417, 0.68666667)
+texture = ExtResource("2_t1w6g")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1405011984]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2" unique_id=1993681379]
+position = Vector2(480, 420)
+scale = Vector2(2.004, 0.9)
+texture = ExtResource("2_gakdm")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=404712776]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=1935255801]
+position = Vector2(51.000004, 341)
+scale = Vector2(1.5, 1.45)
+texture = ExtResource("3_t1w6g")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=1869403847]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2" unique_id=359188285]
+position = Vector2(101, 346)
+texture = ExtResource("4_8jki2")
