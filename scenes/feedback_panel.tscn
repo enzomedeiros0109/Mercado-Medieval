@@ -1,11 +1,28 @@
 [gd_scene format=3 uid="uid://bpyyuj0l8r318"]
 
 [ext_resource type="Script" uid="uid://djckgmll50c2w" path="res://scripts/feedback_panel.gd" id="1_glk6g"]
+[ext_resource type="FontFile" uid="uid://o7vb8p3tiln8" path="res://fontes/Qager-zrlmw.ttf" id="2_465kh"]
+[ext_resource type="Texture2D" uid="uid://cjbh3jqq405o5" path="res://sprites/FEEDBACK_BACKGROUND.png" id="3_66yyq"]
+[ext_resource type="Texture2D" uid="uid://dwjshcv3wvs1u" path="res://sprites/DelieverLabel.png" id="3_emikv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emikv"]
+bg_color = Color(0.116707526, 0.04459607, 0.010908209, 0.43137255)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rnpcp"]
+texture = ExtResource("3_emikv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_emikv"]
+texture = ExtResource("3_emikv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eesjh"]
+texture = ExtResource("3_emikv")
 
 [node name="FeedbackPanel" type="Panel" unique_id=1256979757]
+z_index = 5
 offset_right = 400.0
 offset_bottom = 230.0
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_emikv")
 script = ExtResource("1_glk6g")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=843355669]
@@ -18,17 +35,35 @@ theme_override_constants/separation = 8
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 22
+theme_override_fonts/font = ExtResource("2_465kh")
+theme_override_font_sizes/font_size = 20
 text = "resultados"
+horizontal_alignment = 1
 
 [node name="AnswerLabel" type="Label" parent="VBoxContainer" unique_id=600471427]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_465kh")
 text = "resposta"
+horizontal_alignment = 1
 
 [node name="NextButton" type="Button" parent="VBoxContainer" unique_id=954593260]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_465kh")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_rnpcp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_emikv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_eesjh")
 text = "continuar"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1669980130]
+z_index = -1
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 230.0
+mouse_filter = 2
+texture = ExtResource("3_66yyq")
+expand_mode = 1

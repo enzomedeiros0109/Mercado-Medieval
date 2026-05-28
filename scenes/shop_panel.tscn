@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b6rksl5ulpeff"]
 
-[ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="1_6jwop"]
 [ext_resource type="Script" uid="uid://ba4fer8v0q31" path="res://scripts/shop_panel.gd" id="1_ieywd"]
+[ext_resource type="FontFile" uid="uid://o7vb8p3tiln8" path="res://fontes/Qager-zrlmw.ttf" id="2_e423a"]
 [ext_resource type="Texture2D" uid="uid://b3sqobqjthp8l" path="res://sprites/bancada_resize.png" id="3_e423a"]
 
 [node name="ShopPanel" type="Panel" unique_id=1605362198]
@@ -14,7 +14,7 @@ script = ExtResource("1_ieywd")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=329934813]
 layout_mode = 0
-offset_top = -2.0
+offset_top = 16.0
 offset_right = 960.0
 offset_bottom = 315.0
 
@@ -23,29 +23,16 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
 
-[node name="PotionsTitle" type="Label" parent="HBoxContainer/PotionsColumn" unique_id=1778526003]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_6jwop")
-theme_override_font_sizes/font_size = 16
-text = " Poções "
-horizontal_alignment = 1
-
 [node name="PotionsGrid" type="GridContainer" parent="HBoxContainer/PotionsColumn" unique_id=1135446161]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_constants/h_separation = 2
 theme_override_constants/v_separation = 6
 
 [node name="IngredientsColumn" type="VBoxContainer" parent="HBoxContainer" unique_id=1919403833]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
-
-[node name="IngredientsTitle" type="Label" parent="HBoxContainer/IngredientsColumn" unique_id=907245580]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_6jwop")
-theme_override_font_sizes/font_size = 16
-text = "Ingredientes"
-horizontal_alignment = 1
 
 [node name="IngredientsGrid" type="GridContainer" parent="HBoxContainer/IngredientsColumn" unique_id=1080007690]
 layout_mode = 2
@@ -57,13 +44,6 @@ theme_override_constants/v_separation = 6
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 8
-
-[node name="EquipmentsTitle" type="Label" parent="HBoxContainer/EquipmentsColumn" unique_id=607400498]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_6jwop")
-theme_override_font_sizes/font_size = 16
-text = "Equipamentos"
-horizontal_alignment = 1
 
 [node name="EquipmentsGrid" type="GridContainer" parent="HBoxContainer/EquipmentsColumn" unique_id=248196949]
 layout_mode = 2
@@ -77,3 +57,37 @@ offset_right = 960.0
 offset_bottom = 315.0
 mouse_filter = 2
 texture = ExtResource("3_e423a")
+
+[node name="PotionsTitle" type="Label" parent="." unique_id=1778526003]
+layout_mode = 0
+offset_left = 127.0
+offset_top = -2.0
+offset_right = 191.0
+offset_bottom = 21.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_e423a")
+theme_override_font_sizes/font_size = 16
+text = " Poções "
+horizontal_alignment = 1
+
+[node name="IngredientsTitle" type="Label" parent="." unique_id=907245580]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 2.0
+offset_right = 637.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("2_e423a")
+theme_override_font_sizes/font_size = 16
+text = "Ingredientes"
+horizontal_alignment = 1
+
+[node name="EquipmentsTitle" type="Label" parent="." unique_id=607400498]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 1.0
+offset_right = 960.0
+offset_bottom = 17.0
+theme_override_fonts/font = ExtResource("2_e423a")
+theme_override_font_sizes/font_size = 16
+text = "Equipamentos"
+horizontal_alignment = 1

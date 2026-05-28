@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://vveol6fwp5sp" path="res://scripts/costumer_panel.gd" id="1_0utxo"]
 [ext_resource type="Texture2D" uid="uid://dpu5xgd2iakml" path="res://sprites/pfpless.png" id="1_hod7e"]
-[ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="3_0utxo"]
+[ext_resource type="FontFile" uid="uid://o7vb8p3tiln8" path="res://fontes/Qager-zrlmw.ttf" id="3_0utxo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0utxo"]
 
@@ -34,6 +34,8 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 450.0
 offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("3_0utxo")
+horizontal_alignment = 1
 
 [node name="NameLabel" type="Label" parent="." unique_id=688330102]
 layout_mode = 0
@@ -43,3 +45,4 @@ offset_right = 305.0
 offset_bottom = 33.0
 theme_override_fonts/font = ExtResource("3_0utxo")
 text = "Gerivaldo"
+vertical_alignment = 1
