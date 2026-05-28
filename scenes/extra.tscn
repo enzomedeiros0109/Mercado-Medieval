@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cwjypwhvbtpox"]
 
 [ext_resource type="Texture2D" uid="uid://eurodi2mycc5" path="res://sprites/extra_background.png" id="1_4p50r"]
-[ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="1_sw0id"]
+[ext_resource type="FontFile" uid="uid://o7vb8p3tiln8" path="res://fontes/Qager-zrlmw.ttf" id="2_4p50r"]
 [ext_resource type="Script" uid="uid://7u3wmrskqlsp" path="res://scenes/button.gd" id="3_4p50r"]
 
 [node name="Extra" type="Node2D" unique_id=357209174]
@@ -17,7 +17,7 @@ offset_left = 116.0
 offset_top = 96.0
 offset_right = 233.0
 offset_bottom = 134.0
-theme_override_fonts/font = ExtResource("1_sw0id")
+theme_override_fonts/font = ExtResource("2_4p50r")
 theme_override_font_sizes/font_size = 18
 text = "Voltar"
 script = ExtResource("3_4p50r")
@@ -29,7 +29,7 @@ offset_left = 260.0
 offset_top = 145.0
 offset_right = 693.0
 offset_bottom = 195.0
-theme_override_fonts/font = ExtResource("1_sw0id")
+theme_override_fonts/font = ExtResource("2_4p50r")
 theme_override_font_sizes/font_size = 36
 text = "DESENVOLVEDORES"
 horizontal_alignment = 1
@@ -39,7 +39,7 @@ offset_left = 270.0
 offset_top = 225.0
 offset_right = 695.0
 offset_bottom = 253.0
-theme_override_fonts/font = ExtResource("1_sw0id")
+theme_override_fonts/font = ExtResource("2_4p50r")
 theme_override_font_sizes/font_size = 18
 text = "Gustavo Mendonça de Sousa Meneses"
 horizontal_alignment = 1
@@ -49,7 +49,7 @@ offset_left = 271.0
 offset_top = 282.0
 offset_right = 696.0
 offset_bottom = 310.0
-theme_override_fonts/font = ExtResource("1_sw0id")
+theme_override_fonts/font = ExtResource("2_4p50r")
 theme_override_font_sizes/font_size = 18
 text = "Sérgio de Paiva Ximenes Filho"
 horizontal_alignment = 1
@@ -59,7 +59,7 @@ offset_left = 270.0
 offset_top = 339.0
 offset_right = 695.0
 offset_bottom = 367.0
-theme_override_fonts/font = ExtResource("1_sw0id")
+theme_override_fonts/font = ExtResource("2_4p50r")
 theme_override_font_sizes/font_size = 18
 text = "Enzo Sá de Medeiros e Silva"
 horizontal_alignment = 1
