@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cwjypwhvbtpox"]
+
+[ext_resource type="Texture2D" uid="uid://eurodi2mycc5" path="res://sprites/extra_background.png" id="1_4p50r"]
+[ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="1_sw0id"]
+[ext_resource type="Script" uid="uid://7u3wmrskqlsp" path="res://scenes/button.gd" id="3_4p50r"]
+
+[node name="Extra" type="Node2D" unique_id=357209174]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=764871268]
+position = Vector2(481.95947, 254.9919)
+rotation = -1.5712241
+scale = Vector2(1, 2.187873)
+texture = ExtResource("1_4p50r")
+
+[node name="Voltar_Button" type="Button" parent="." unique_id=1681502183]
+offset_left = 116.0
+offset_top = 96.0
+offset_right = 233.0
+offset_bottom = 134.0
+theme_override_fonts/font = ExtResource("1_sw0id")
+theme_override_font_sizes/font_size = 18
+text = "Voltar"
+script = ExtResource("3_4p50r")
+
+[node name="Labels" type="Node" parent="." unique_id=375259138]
+
+[node name="Title" type="Label" parent="Labels" unique_id=2049146807]
+offset_left = 260.0
+offset_top = 145.0
+offset_right = 693.0
+offset_bottom = 195.0
+theme_override_fonts/font = ExtResource("1_sw0id")
+theme_override_font_sizes/font_size = 36
+text = "DESENVOLVEDORES"
+horizontal_alignment = 1
+
+[node name="Dev1" type="Label" parent="Labels" unique_id=668073461]
+offset_left = 270.0
+offset_top = 225.0
+offset_right = 695.0
+offset_bottom = 253.0
+theme_override_fonts/font = ExtResource("1_sw0id")
+theme_override_font_sizes/font_size = 18
+text = "Gustavo Mendonça de Sousa Meneses"
+horizontal_alignment = 1
+
+[node name="Dev2" type="Label" parent="Labels" unique_id=1939472079]
+offset_left = 271.0
+offset_top = 282.0
+offset_right = 696.0
+offset_bottom = 310.0
+theme_override_fonts/font = ExtResource("1_sw0id")
+theme_override_font_sizes/font_size = 18
+text = "Sérgio de Paiva Ximenes Filho"
+horizontal_alignment = 1
+
+[node name="Dev3" type="Label" parent="Labels" unique_id=915399933]
+offset_left = 270.0
+offset_top = 339.0
+offset_right = 695.0
+offset_bottom = 367.0
+theme_override_fonts/font = ExtResource("1_sw0id")
+theme_override_font_sizes/font_size = 18
+text = "Enzo Sá de Medeiros e Silva"
+horizontal_alignment = 1
+
+[node name="Painel" type="ColorRect" parent="." unique_id=92187847]
+offset_left = 259.0
+offset_top = 208.0
+offset_right = 696.0
+offset_bottom = 391.0
+color = Color(0, 0, 0, 0.45490196)
+
+[connection signal="pressed" from="Voltar_Button" to="Voltar_Button" method="_on_pressed"]

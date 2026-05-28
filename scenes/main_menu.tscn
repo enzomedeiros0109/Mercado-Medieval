@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="2_8ln24"]
 [ext_resource type="FontFile" uid="uid://o7vb8p3tiln8" path="res://fontes/Qager-zrlmw.ttf" id="2_rtw2f"]
 [ext_resource type="Script" uid="uid://gpe2b5qgmvxg" path="res://scripts/exit_button.gd" id="3_bqqt6"]
+[ext_resource type="Script" uid="uid://bgoksfl7coboa" path="res://scenes/extra_button.gd" id="4_8ln24"]
 
 [node name="MainMenu" type="Node2D" unique_id=312149259]
 
@@ -36,6 +37,7 @@ offset_bottom = 378.0
 theme_override_fonts/font = ExtResource("2_rtw2f")
 theme_override_font_sizes/font_size = 24
 text = "EXTRA"
+script = ExtResource("4_8ln24")
 
 [node name="ExitButton" type="Button" parent="." unique_id=1062559686]
 offset_left = 351.0
@@ -75,4 +77,5 @@ text = "MERCADO MEDIEVAL"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
+[connection signal="pressed" from="ExtraButton" to="ExtraButton" method="_on_pressed"]
 [connection signal="pressed" from="ExitButton" to="ExitButton" method="_on_pressed"]
