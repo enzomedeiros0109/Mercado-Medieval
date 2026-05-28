@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d36wukb25lp26" path="res://scripts/cart_panel.gd" id="1_xv0j0"]
 [ext_resource type="Texture2D" uid="uid://dwjshcv3wvs1u" path="res://sprites/DelieverLabel.png" id="2_e88p6"]
+[ext_resource type="FontFile" uid="uid://o7vb8p3tiln8" path="res://fontes/Qager-zrlmw.ttf" id="2_pm8og"]
 [ext_resource type="Texture2D" uid="uid://403ae3065qm4" path="res://sprites/oaktable.png" id="3_xv0j0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xv0j0"]
@@ -28,6 +29,7 @@ offset_left = 820.0
 offset_top = 12.0
 offset_right = 950.0
 offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("2_pm8og")
 theme_override_styles/normal = SubResource("StyleBoxTexture_pm8og")
 action_mode = 0
 text = "Entregar"

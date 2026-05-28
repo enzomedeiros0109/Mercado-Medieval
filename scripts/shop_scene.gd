@@ -3,7 +3,10 @@ extends Node
 
 @onready var customer_panel  = $CostumerPanel
 @onready var cart_panel      = $CartPanel
+@onready var cart_panel_items = $CartPanel/CartItemList
 @onready var shop_panel      = $ShopPanel
+@onready var shop_panel_items = $ShopPanel/HBoxContainer
+@onready var deliver_button = $CartPanel/DeliverButton
 @onready var feedback_panel  = $FeedbackPanel
 
 var current_customer: Dictionary = {}
@@ -92,9 +95,10 @@ var customer_pool: Array = [
 	{
 		"name": "Goblin Grog",
 		"sprite": "res://sprites/spritesclientes/GoblinGrog.png",
-		"problem": "Vou fazer um sopão! Me vê pernas de sapo:\nquero colocar 3 pernas em cada um\ndos meus 5 pratos de sopa.",
+		"problem": "Vou fazer um sopão! Me vê algumas pernas \nde sapo e olhos de aranha:\nquero colocar 3 pernas e 1 olho em cada um\ndos meus 5 pratos de sopa.",
 		"correct_order": {
-			"Perna de Sapo": 15
+			"Perna de Sapo": 15,
+			"Olho de Aranha": 5
 		}
 	},
 	{
@@ -149,7 +153,9 @@ var customer_pool: Array = [
 
 func _ready():
 	shop_panel.item_clicked.connect(_on_item_clicked)
-	cart_panel.deliver_pressed.connect(_on_deliver_pressed)
+	#cart_panel.deliver_pressed.connect(_on_deliver_pressed)
+	if not cart_panel.deliver_pressed.is_connected(_on_deliver_pressed):
+		cart_panel.deliver_pressed.connect(_on_deliver_pressed)
 	feedback_panel.next_pressed.connect(_on_next_customer)
 	feedback_panel.hide()
 	_spawn_next_customer()
@@ -166,19 +172,17 @@ func _on_deliver_pressed():
 	var cart = cart_panel.get_cart()
 	var correct_order = current_customer["correct_order"]
 
-	shop_panel.hide()
-	cart_panel.hide()
-
+	shop_panel_items.hide()
+	cart_panel_items.hide()
+	deliver_button.hide()
+	
 	if _check_order(cart, correct_order):
 		GameManager.add_correct()
-		var expected = correct_order.values()[0]
-		var given = cart.values()[0] if cart.size() > 0 else 0
-		feedback_panel.show_result(true, given, expected)
+		feedback_panel.show_result(true, cart, correct_order)
 	else:
 		GameManager.add_wrong()
-		var expected = correct_order.values()[0]
-		var given = cart.values()[0] if cart.size() > 0 else 0
-		feedback_panel.show_result(false, given, expected)
+		feedback_panel.show_result(false, cart, correct_order)
+
 
 func _check_order(cart: Dictionary, correct_order: Dictionary) -> bool:
 	if cart.size() != correct_order.size():
@@ -192,7 +196,8 @@ func _check_order(cart: Dictionary, correct_order: Dictionary) -> bool:
 
 func _on_next_customer():
 	feedback_panel.hide()
-	shop_panel.show()
-	cart_panel.show()
+	shop_panel_items.show()
+	cart_panel_items.show()
+	deliver_button.show()
 	_spawn_next_customer()
  

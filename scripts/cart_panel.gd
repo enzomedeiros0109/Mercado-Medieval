@@ -15,9 +15,13 @@ var cart_nodes: Dictionary = {}
 
 
 func _ready():
-	deliver_button.pressed.connect(func(): emit_signal("deliver_pressed"))
+	if not deliver_button.pressed.is_connected(_on_deliver_button_pressed):
+		deliver_button.pressed.connect(_on_deliver_button_pressed)
+	#deliver_button.pressed.connect(func(): emit_signal("deliver_pressed"))
 	
 
+func _on_deliver_button_pressed():
+	emit_signal("deliver_pressed")
 #-------------------------------------------------------------------------
 
 func add_item(item: Dictionary):
