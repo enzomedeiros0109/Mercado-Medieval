@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bt4trnlv72sdj"]
 
 [ext_resource type="Texture2D" uid="uid://51ebj0t7kckq" path="res://sprites/background_provisorio.png" id="1_ekxnf"]
-[ext_resource type="Script" uid="uid://d3xqho3a6jhqh" path="res://start_button.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://d3xqho3a6jhqh" path="res://scripts/start_button.gd" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://o7vb8p3tiln8" path="res://fontes/Qager-zrlmw.ttf" id="2_rtw2f"]
 [ext_resource type="Script" uid="uid://gpe2b5qgmvxg" path="res://scripts/exit_button.gd" id="3_bqqt6"]
-[ext_resource type="Script" uid="uid://bgoksfl7coboa" path="res://scenes/extra_button.gd" id="4_8ln24"]
+[ext_resource type="Script" uid="uid://bgoksfl7coboa" path="res://scripts/extra_button.gd" id="4_8ln24"]
+[ext_resource type="AudioStream" uid="uid://bntwu6h0ctxcl" path="res://Soundtrack/Musicas/MusicaMenu.mp3" id="6_rtw2f"]
 
 [node name="MainMenu" type="Node2D" unique_id=312149259]
 
@@ -74,6 +75,10 @@ theme_override_fonts/font = ExtResource("2_rtw2f")
 theme_override_font_sizes/font_size = 72
 text = "MERCADO MEDIEVAL"
 horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1351070985]
+stream = ExtResource("6_rtw2f")
+autoplay = true
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
 [connection signal="pressed" from="ExtraButton" to="ExtraButton" method="_on_pressed"]

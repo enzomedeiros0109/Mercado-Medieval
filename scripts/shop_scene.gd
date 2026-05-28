@@ -171,6 +171,7 @@ func _on_item_clicked(item: Dictionary):
 func _on_deliver_pressed():
 	var cart = cart_panel.get_cart()
 	var correct_order = current_customer["correct_order"]
+	#print(correct_order)
 
 	shop_panel_items.hide()
 	cart_panel_items.hide()

@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ba4fer8v0q31" path="res://scripts/shop_panel.gd" id="1_ieywd"]
 [ext_resource type="FontFile" uid="uid://o7vb8p3tiln8" path="res://fontes/Qager-zrlmw.ttf" id="2_e423a"]
-[ext_resource type="Texture2D" uid="uid://b3sqobqjthp8l" path="res://sprites/bancada_resize.png" id="3_e423a"]
+[ext_resource type="Texture2D" uid="uid://cfmwchxlqfal8" path="res://sprites/SpriteBalcao.png" id="2_y8121"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e423a"]
 
 [node name="ShopPanel" type="Panel" unique_id=1605362198]
 offset_top = 225.0
@@ -10,13 +12,14 @@ offset_right = 960.0
 offset_bottom = 540.0
 size_flags_horizontal = 3
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e423a")
 script = ExtResource("1_ieywd")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=329934813]
 layout_mode = 0
-offset_top = 16.0
+offset_top = 28.0
 offset_right = 960.0
-offset_bottom = 315.0
+offset_bottom = 273.0
 
 [node name="PotionsColumn" type="VBoxContainer" parent="HBoxContainer" unique_id=577662701]
 layout_mode = 2
@@ -52,13 +55,16 @@ theme_override_constants/v_separation = 6
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=406707051]
 z_index = -2
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 offset_right = 960.0
 offset_bottom = 315.0
 mouse_filter = 2
-texture = ExtResource("3_e423a")
+texture = ExtResource("2_y8121")
+expand_mode = 1
 
 [node name="PotionsTitle" type="Label" parent="." unique_id=1778526003]
+visible = false
 layout_mode = 0
 offset_left = 127.0
 offset_top = -2.0
@@ -67,10 +73,11 @@ offset_bottom = 21.0
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_e423a")
 theme_override_font_sizes/font_size = 16
-text = " Poções "
+text = " POÇÕES"
 horizontal_alignment = 1
 
 [node name="IngredientsTitle" type="Label" parent="." unique_id=907245580]
+visible = false
 layout_mode = 0
 offset_left = 320.0
 offset_top = 2.0
@@ -78,10 +85,11 @@ offset_right = 637.0
 offset_bottom = 18.0
 theme_override_fonts/font = ExtResource("2_e423a")
 theme_override_font_sizes/font_size = 16
-text = "Ingredientes"
+text = "INGREDIENTES"
 horizontal_alignment = 1
 
 [node name="EquipmentsTitle" type="Label" parent="." unique_id=607400498]
+visible = false
 layout_mode = 0
 offset_left = 642.0
 offset_top = 1.0
@@ -89,5 +97,5 @@ offset_right = 960.0
 offset_bottom = 17.0
 theme_override_fonts/font = ExtResource("2_e423a")
 theme_override_font_sizes/font_size = 16
-text = "Equipamentos"
+text = "INGREDIENTES"
 horizontal_alignment = 1

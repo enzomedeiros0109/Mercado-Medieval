@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b6rksl5ulpeff" path="res://scenes/shop_panel.tscn" id="4_bk5ov"]
 [ext_resource type="PackedScene" uid="uid://crur2h3336c4m" path="res://scenes/hud.tscn" id="5_27noo"]
 [ext_resource type="PackedScene" uid="uid://bpyyuj0l8r318" path="res://scenes/feedback_panel.tscn" id="6_tvdqs"]
+[ext_resource type="AudioStream" uid="uid://blshjmuvn0qmw" path="res://Soundtrack/Musicas/ShopMusic.mp3" id="8_27noo"]
 
 [node name="ShopScene" type="Node" unique_id=1166642726]
 script = ExtResource("1_p7evi")
@@ -30,7 +31,12 @@ mouse_filter = 2
 [node name="HUD" parent="." unique_id=552382864 instance=ExtResource("5_27noo")]
 
 [node name="FeedbackPanel" parent="." unique_id=1256979757 instance=ExtResource("6_tvdqs")]
-offset_left = 282.0
-offset_top = 167.0
-offset_right = 682.0
-offset_bottom = 397.0
+offset_left = 136.0
+offset_top = 273.0
+offset_right = 822.0
+offset_bottom = 503.0
+
+[node name="MusicaBackgroundLoja" type="AudioStreamPlayer2D" parent="." unique_id=1264537352]
+stream = ExtResource("8_27noo")
+volume_db = -10.0
+autoplay = true
