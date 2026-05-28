@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://51ebj0t7kckq" path="res://sprites/background_provisorio.png" id="1_ekxnf"]
 [ext_resource type="Script" uid="uid://d3xqho3a6jhqh" path="res://start_button.gd" id="1_l6cm7"]
-[ext_resource type="FontFile" uid="uid://dv46qucdr573a" path="res://fontes/CELTG___.TTF" id="2_8ln24"]
 [ext_resource type="FontFile" uid="uid://o7vb8p3tiln8" path="res://fontes/Qager-zrlmw.ttf" id="2_rtw2f"]
 [ext_resource type="Script" uid="uid://gpe2b5qgmvxg" path="res://scripts/exit_button.gd" id="3_bqqt6"]
 [ext_resource type="Script" uid="uid://bgoksfl7coboa" path="res://scenes/extra_button.gd" id="4_8ln24"]
@@ -56,8 +55,8 @@ offset_top = 50.0
 offset_right = 960.0
 offset_bottom = 149.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_8ln24")
-theme_override_font_sizes/font_size = 48
+theme_override_fonts/font = ExtResource("2_rtw2f")
+theme_override_font_sizes/font_size = 72
 text = "MERCADO MEDIEVAL"
 horizontal_alignment = 1
 
@@ -71,8 +70,8 @@ offset_right = 477.0
 offset_bottom = 97.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_8ln24")
-theme_override_font_sizes/font_size = 48
+theme_override_fonts/font = ExtResource("2_rtw2f")
+theme_override_font_sizes/font_size = 72
 text = "MERCADO MEDIEVAL"
 horizontal_alignment = 1
 
